@@ -8,7 +8,7 @@ Joined late because I clicked the wrong link but I think I get the main gist of 
 
 One of the speaker mentioned that plenty of companies have paid up for ransomwares anyways especially if the data in ransom is particularly valuable and this is mostly an open secret type of thing. I naively thought that this either do not occur that much, or the latest security technology is getting better at preventing this. 
 
-The speaker Mr Cartan from Nihon Cyber Defence Japan mentions one of the weakest links for any government agencies/industry is the overseas office (will need to re-check the exact term used so I hope this conveys the meaning well enough). Due ot this weakest links, these ransomware attacks have evolved to be more sophisticated to abuse every weakest exploit. In other words, the attackers had enumerated their targets well.
+The speaker, Mr Cartan from Nihon Cyber Defence Japan mentions one of the weakest links for any government agencies/industry is the overseas office (will need to re-check the exact term used so I hope this conveys the meaning well enough). Due ot this weakest links, these ransomware attacks have evolved to be more sophisticated to abuse every weakest exploit. In other words, the attackers had enumerated their targets well.
 
 Through their enumeration, they even manage to identify and call out bluffs by companies that claim to not be able to pay a ransomware by pointing out insurance the company may have. 
 
