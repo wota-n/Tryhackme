@@ -51,3 +51,31 @@ Above is the command used to check how to use it with john
 * john --format=whirlpool Desktop/hash4.txt Downloads/rockyou.txt
 
 c*******. This format does not need raw.
+
+
+# THM 12 September
+
+## Cracking /etc/shadow hashes
+
+This task is quite interesting and took some time for me to fully get. 
+
+Essentially, given a /etc/shadow file, it needs to be combined with a /etc/passwd file first so that John the Ripper can correctly crack the file.
+
+The 'unshadow' command is used for this. This command essentially combines the /etc/shadow file - which may contain a password hash and a local /etc/passwd file. The end result is a file that looks like it natively belongs in an /etc/shadow file.
+
+Difference between shadow and passwd are as follow: passwd no longer contains user passwords as it is moved to shadow due to security concerns. Only root users can access /etc/shadow which makes it harder for attacker to crack it due to needing access.
+
+Source I used [here](https://unix.stackexchange.com/questions/461022/what-is-the-difference-between-etc-shadow-and-etc-passwd).
+
+>unshadow /etc/passwd etchashes.txt > unshadowed.txt
+
+Above is command I used to unshadow the given task file and a /etc/passwd from the Kali Linux container I am using.
+
+>john --wordlist=rockyou.txt  --format=sha512crypt unshadowed.txt
+
+Above is the command for John to crack the unshadowed.txt file generated.
+
+>What is the root password?
+*****
+
+I also began using a Kali docker container for this task to see how well and easy using docker is compared to running a VM. I like that since everything is isolated, I do not need to install my host machine with packages I rarely use. John seems to run well, should try hashcat at some point.
